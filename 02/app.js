@@ -54,3 +54,40 @@ console.log(arr.length);
 for (var i=0;i<arr.length;i++) {
     console.log(arr.length);
 }
+
+//배열 - creat
+var article = {
+    title: '제목1',
+    url: 'http://naver.com',
+};
+
+var articles = [article];
+console.log(articles);
+
+var todos = ['운동'];
+var todo = '게임';
+todos.push(todo);
+
+console.log(todos);
+
+//배열 - read
+todos.forEach(function(todo) {
+    console.log(todo);
+});
+
+//배열 - update
+var updateTodo = '게임';
+var updateIndex = todos.findIndex(function(todo) {
+    return todo === updateTodo;
+});
+todos[updateIndex] = '공부';
+console.log(todos);
+
+//배열 - delete
+var todos = ['운동', '공부', '목욕'];
+var deleteTodo = '공부';
+var deleteIndex = todos.findIndex(function(todo) {
+    return todo === deleteTodo;
+});
+todos.splice(deleteIndex, 1);
+console.log(todos);
