@@ -134,38 +134,72 @@ console.log('03');
 // var str = new String('jeju');
 // console.log(str + ' jeju');
 
-function aCreate(todos, todo) {
-    todos.push(todo);
-    console.log(todos);
-}
+// CRED 함수화
+// function aCreate(todos, todo) {
+//     todos.push(todo);
+//     console.log(todos);
+// }
 
-function aRead(todos){
-    todos.forEach(function(todo) {
-        console.log(todo);
-    });
-}
+// function aRead(todos){
+//     todos.forEach(function(todo) {
+//         console.log(todo);
+//     });
+// }
 
-function aUpdate(todos, updateTodo){
-    var updateIndex = todos.findIndex(function(todo) {
-        return todo === updateTodo;
-    });
-    todos[updateIndex] = '공부';
-    console.log(todos);
-}
+// function aUpdate(todos, updateTodo){
+//     var updateIndex = todos.findIndex(function(todo) {
+//         return todo === updateTodo;
+//     });
+//     todos[updateIndex] = '공부';
+//     console.log(todos);
+// }
 
-function aDelete(todos, deleteTodo) {
-    var deleteIndex = todos.findIndex(function(todo) {
-        return todo === deleteTodo;
-    });
-    todos.splice(deleteIndex, 1);
-    console.log(todos);
-}
+// function aDelete(todos, deleteTodo) {
+//     var deleteIndex = todos.findIndex(function(todo) {
+//         return todo === deleteTodo;
+//     });
+//     todos.splice(deleteIndex, 1);
+//     console.log(todos);
+// }
 
-var todos = ['운동'];
-var todo = '게임';
-var updateTodo = '게임';
-var deleteTodo = '운동';
-aCreate(todos, todo);
-aRead(todos);
-aUpdate(todos, updateTodo);
-aDelete(todos, deleteTodo);
+// var todos = ['운동'];
+// var todo = '게임';
+// var updateTodo = '게임';
+// var deleteTodo = '운동';
+// aCreate(todos, todo);
+// aRead(todos);
+// aUpdate(todos, updateTodo);
+// aDelete(todos, deleteTodo);
+
+// var count = [10, 20, 30, 40, 50, 60, 70, 100];
+// var sum = 0;
+// for(var i=0; i<count.length; i++){
+//     sum += count[i];
+// }
+// avg = sum/count.length;
+// console.log(avg);
+
+// function gugu(){
+//     for(var i=1; i<=9; i++){
+//         for(var j=1; j<=9; j++){
+//             console.log(`${i} x ${j} = ${i*j}`);
+//         }
+//     }
+// }
+
+// var math = {
+//     gugu: function(){
+//             for(var i=1; i<=9; i++){
+//                 for(var j=1; j<=9; j++){
+//                     console.log(`${i} x ${j} = ${i*j}`);
+//                 }
+//             }
+//         }
+// }
+
+// var sum = 0;
+// do {
+//     num = prompt('숫자를 입력하세요');
+//     sum += Number(num);
+// } while (num != null);
+// alert(`숫자의 합 ${sum}`);
