@@ -19,7 +19,7 @@ for (let i = 0; i < 4; i++) {
   }
   // debugger;
   // eslint-disable-next-line no-unused-vars
-  function resetBored() {
+  function resetBoard() {
     let index = 0;
     for (let i = 0; i < 4; i++) {
       for (let j = 0; j < 4; j++) {
@@ -33,7 +33,7 @@ for (let i = 0; i < 4; i++) {
     }
   }
   board.addEventListener('click', (event) => {
-    resetBored();
+    resetBoard();
     const { target } = event;
     if (target !== board) {
       target.style.backgroundColor = 'red';
