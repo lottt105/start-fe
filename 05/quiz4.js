@@ -1,31 +1,24 @@
-var $box = document.querySelector('#box');
-var boxX;
-var baxY;
-var isDragable = false;
+const $box = document.querySelector('#box');
 
-$box.addEventListener('mousedown',function (e) {
+let offset = {x:0, y:0};
+let isDragable = false;
+
+$box.addEventListener('mousedown',(e) => {
     isDragable = true;
-    boxX = parseInt($box.style.left);
-    boxY = parseInt($box.style.top);
-    console.log(boxX, boxY);
+    console.log('mousedown');
+    offset.x = $box.offsetLeft - e.clientX;
+    offset.y = $box.offsetTop - e.clientY;
+    // console.log(boxX, boxY);
 });
 
-$box.addEventListener('mousemove',function (e) {
-    if(isDragable) {
-        boxX += e.movementX;
-        boxY += e.movementY;
-        $box.style.left = boxX + 'px';
-        $box.style.top = boxY + 'px';
-    }
+document.body.addEventListener('mousemove',(e) => {
+    console.log('mousemove');
+    if (!isDragable) return;
+    $box.style.left = e.clientX + offset.x;
+    $box.style.top = e.clientY + offset.y;
 });
 
-$box.addEventListener('mouseup',function (e) {
+$box.addEventListener('mouseup',(e) => {
     isDragable = false;
+    console.log('mouseup');
 });
-
-function initBox() {
-    $box.style.left = '10px';
-    $box.style.top = '10px';
-}
-
-initBox();
