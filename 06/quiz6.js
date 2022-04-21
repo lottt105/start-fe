@@ -6,7 +6,6 @@ const $result = document.querySelector("#result")
 $btn.addEventListener('click',(e) => {
     $result.innerHTML = "";
     let n = $num.value;
-    console.log(isNaN(n));
     if (isNaN(n)) {
         alert("숫자를 입력해주세요")
     }
